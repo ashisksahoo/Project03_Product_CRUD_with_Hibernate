@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC 
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database Connection Settings -->
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/hibernateproject</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">admin</property>
+		<!-- JDBC Connection Pool -->
+		<property name="connection.pool_size">1</property>
+		<!-- SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property> 
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">false</property>
+		<!-- Create and update the database schema on startup -->
+		<property name="hbm2ddl.auto">update</property>
+		<!-- Names the Annotated Entry Class -->
+		<mapping class="com.techpalle.model.Product"/> 
+	</session-factory>
+</hibernate-configuration>
